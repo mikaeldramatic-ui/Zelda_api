@@ -1,0 +1,39 @@
+.home {
+  min-height: 100vh;
+  background-color: black;
+  background-image: url("../assets/Link.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
+
+.content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 280px;
+}
+
+.button {
+  padding: 12px 24px;
+  background-color: #093008;
+  color:white;
+  text-decoration: none;
+  border: 2px solid #c9a227;
+  border-radius: 6px;
+  position:absolute;
+  top: 20px;
+  right: 20px;
+}

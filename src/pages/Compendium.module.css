@@ -1,0 +1,39 @@
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Search bar */
+.search {
+  width: 150px;
+  height: 32px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #999;
+}
+
+.select {
+  width: 150px;
+  height: 32px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-right: 8px;
+}
