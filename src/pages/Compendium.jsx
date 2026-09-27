@@ -4,9 +4,12 @@ import Card from "../components/Card.jsx";
 import styles from "./Compendium.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFavorite } from "../store/zeldaSlice.js";
+import { useParams, useNavigate } from "react-router-dom";
 
 function Compendium() {
   const { items, loading, error } = useZeldaData();
+  const { category } = useParams();
+  const navigate = useNavigate();
   const favorites = useSelector((state) => state.zelda.favorites);
   const dispatch = useDispatch();
   const [searchText, setSearchText] = useState("");
@@ -46,7 +49,10 @@ function Compendium() {
       <select
         className={styles.select}
         value={selectedCategory}
-        onChange={(event) => setSelectedCategory(event.target.value)}
+        onChange={(event) => {
+          setSelectedCategory(event.target.value);
+          navigate(`/compendium/${event.target.value}`);
+        }}
       >
         <option value="all">All</option>
         <option value="materials">Materials</option>
