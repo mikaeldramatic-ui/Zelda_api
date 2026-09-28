@@ -3,13 +3,14 @@ import styles from "./About.module.css";
 function About() {
   return (
     <main className={styles.about}>
-      <div className={styles.img}>
-        <h1 className={styles.h1}>About Zelda</h1>
-        <blockquote className={styles.block}>
-          "When the Beast Ganon reawakens, the Princess will need her Knight...
-          and the Knight will need the sword that seals the darkness."
-        </blockquote>
-        <h2 className={styles.h2}>The story of Breath of the Wild</h2>
+      <h1 className={styles.h1}>About Zelda</h1>
+      <blockquote className={styles.block}>
+        "When the Beast Ganon reawakens, the Princess will need her Knight...
+        and the Knight will need the sword that seals the darkness."
+      </blockquote>
+      <h2 className={styles.h2}>The story of Breath of the Wild</h2>
+
+      <section className={styles.card}>
         <h3 className={styles.h3}>
           The 10,000 Years of Peace and Sheikah Technology
         </h3>
@@ -19,6 +20,8 @@ function About() {
           technology was designed to protect Hyrule from the recurring threat of
           Calamity Ganon.
         </p>
+      </section>
+      <section className={`${styles.card} ${styles.right}`}>
         <h3 className={styles.h3}>The Prophecy and the Great Calamity</h3>
         <p className={styles.text}>
           The Sheikah created thousands of Guardians and four enormous Divine
@@ -31,6 +34,9 @@ function About() {
           machines again. Four champions were chosen to control the Divine
           Beasts, and Link was appointed as Zelda's personal knight.
         </p>
+      </section>
+
+      <section className={styles.card}>
         <h3 className={styles.h3}>The Fall of Hyrule</h3>
         <p className={styles.text}>
           When Calamity Ganon returned, he took control of Hyrule's defenses and
@@ -39,6 +45,8 @@ function About() {
           Champions were killed. And Link was mortally wounded while protecting
           Zelda.
         </p>
+      </section>
+      <section className={`${styles.card} ${styles.right}`}>
         <h3 className={styles.h3}>Zelda's Sacrifice and Link's Sleep</h3>
         <p className={styles.text}>
           Link was taken to the Shrine of Resurrection by Zelda to heal in a
@@ -46,6 +54,8 @@ function About() {
           her sacred power to seal Calamity Ganon and restrain him for 100
           years.
         </p>
+      </section>
+      <section className={styles.card}>
         <h3 className={styles.h3}>100 Years Later...</h3>
         <p className={styles.text}>
           Link finally awoke without any memories of his past. He was guided by
@@ -54,7 +64,7 @@ function About() {
           Beasts, and finally fight Ganon himself to save Princess Zelda, for
           she had been waiting for him for over a century.
         </p>
-      </div>
+      </section>
     </main>
   );
 }
