@@ -6,6 +6,16 @@
   margin: 0 auto;
 }
 
+.compendium {
+  display: flow-root;
+  min-height: 100vh;
+  background-image: url("../assets/cards.webp");
+  background-size: 100% auto;
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 @media (max-width: 900px) {
   .cardGrid {
     grid-template-columns: repeat(2, 1fr);

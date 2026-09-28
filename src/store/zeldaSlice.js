@@ -24,7 +24,12 @@ const zeldaSlice = createSlice({
     },
 
     addFavorite: (state, action) => {
-      state.favorites.push(action.payload);
+      const alreadyFavorite = state.favorites.some(
+        (favorite) => favorite.id === action.payload.id
+      );
+      if (!alreadyFavorite) {
+        state.favorites.push(action.payload);
+      }
     },
 
     removeFavorite: (state, action) => {
