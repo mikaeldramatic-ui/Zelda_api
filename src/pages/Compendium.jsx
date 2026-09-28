@@ -2,16 +2,12 @@ import { useState } from "react";
 import { useZeldaData } from "../hooks/useZeldaData.js";
 import Card from "../components/Card.jsx";
 import styles from "./Compendium.module.css";
-import { useSelector, useDispatch } from "react-redux";
-import { removeFavorite } from "../store/zeldaSlice.js";
 import { useParams, useNavigate } from "react-router-dom";
 
 function Compendium() {
   const { items, loading, error } = useZeldaData();
   const { category } = useParams();
   const navigate = useNavigate();
-  const favorites = useSelector((state) => state.zelda.favorites);
-  const dispatch = useDispatch();
   const [searchText, setSearchText] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
 
@@ -27,21 +23,8 @@ function Compendium() {
   });
 
   return (
-    <main>
+    <main className={styles.compendium}>
       <h1>Hyrule Compendium</h1>
-
-      <p>Total favorites: {favorites.length}</p>
-
-      <ul>
-        {favorites.map((favorite) => (
-          <li key={favorite.id}>
-            {favorite.name}
-            <button onClick={() => dispatch(removeFavorite(favorite))}>
-              Remove
-            </button>
-          </li>
-        ))}
-      </ul>
 
       {loading && <p>Laddar...</p>}
       {error && <p>{error}</p>}
