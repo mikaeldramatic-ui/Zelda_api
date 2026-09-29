@@ -1,0 +1,23 @@
+.navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background-color: #093008;
+
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.button {
+  padding: 6px 14px;
+  background-color: #093008;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #c9a227;
+  border-radius: 2px;
+}
+
+.button:hover {
+  background-color: #c9a227;
+  color: #093008;
+}

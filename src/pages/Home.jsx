@@ -7,15 +7,6 @@ function Home() {
     <main className={styles.home}>
       <div className={styles.content}>
         <img src={logo} alt="Zelda Breath Of The Wild" />
-        <div className={styles.buttons}>
-          <Link className={styles.button} to="/compendium">
-            Go to Compendium
-          </Link>
-
-          <Link className={styles.button} to="/about">
-            Go to About
-          </Link>
-        </div>
       </div>
     </main>
   );
